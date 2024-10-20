@@ -14,7 +14,7 @@ namespace DotNet_Assignment_2.Models
         public static List<Teacher> GetTeacher() {
             List<Teacher> tl = new List<Teacher>();
             Teacher teacher = new Teacher();
-            teacher.Id = 0;
+            teacher.Id = 01;
             teacher.Name = "Nafiur Rahman Protik";
             teacher.CourseName = "Asp DotNet core web api";
             tl.Add(teacher);

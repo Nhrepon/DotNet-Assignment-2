@@ -1,0 +1,42 @@
+﻿@using DotNet_Assignment_2.Models;
+
+@{
+    ViewBag.Title = "Teacher List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h2 class="text-center" id="title">@ViewBag.Title</h2>
+    <hr />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Teacher Name</td>
+                <td>Course Name</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @{
+                List<Teacher> tl = Teacher.GetTeacher();
+                foreach (Teacher teacher in tl)
+                {
+                    <tr>
+                        <td>@teacher.Id</td>
+                        <td>@teacher.Name</td>
+                        <td>@teacher.CourseName</td>
+                        <td>
+                            <button class="btn btn-success" onclick="alert(Edit item?)">Edit</button>
+                            <button class="btn btn-danger" onclick="alert(Delete item?)">Delete</button>
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+
+
+
+</div>
